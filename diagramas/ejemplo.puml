@@ -1,4 +1,4 @@
 @startuml
-"Brayan Ronaldinho" -> Ruben: Hola papá
-return Hola hijo!
+Alice->Bob : Hello
+return ok
 @enduml
