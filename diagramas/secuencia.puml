@@ -1,0 +1,4 @@
+@startuml
+"Brayan Ronaldinho" -> Ruben: Hello
+Ruben --> "Brayan Ronaldinho": Hola papá
+@enduml

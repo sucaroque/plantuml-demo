@@ -2,9 +2,11 @@ name: Generate PlantUML diagrams
 
 on:
   push:
+    # Ejecuta el workflow SOLO si cambian archivos .puml
     paths:
-      - '**.puml'
+      - '**/*.puml'
 
+# Permite que el workflow pueda hacer push al repositorio
 permissions:
   contents: write
 
@@ -13,21 +15,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      #Paso 1: Clona el repositorio dentro del runner de GitHub
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # Usa el token automático para poder hacer push después
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      #Paso 2: Instala PlantUML en el entorno Linux
       - name: Install PlantUML
-        run: sudo apt-get update && sudo apt-get install -y plantuml
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y plantuml
 
+      #Paso 3: Limpia imágenes antiguas (.png) para evitar basura
+      - name: Clean old images
+        run: rm -f diagramas/**/*.png
+
+      #Paso 4: Genera los diagramas desde todos los archivos .puml
       - name: Generate diagrams
-        run: plantuml -tpng $(find . -name "*.puml")
+        run: plantuml -tpng diagramas/**/*.puml
 
+      #Paso 5: Guarda los cambios (imágenes generadas) y los sube a GitHub
       - name: Commit and push
         run: |
+          # Configura usuario del bot
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+
+          # Agrega todos los cambios (nuevos .png)
           git add .
+
+          # Crea commit (si hay cambios)
           git commit -m "Auto-generated diagrams" || echo "No changes"
+
+          # Hace push al repositorio
           git push

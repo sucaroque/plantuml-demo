@@ -1,4 +1,0 @@
-@startuml
-Brayan -> Ruben: Hello
-Ruben --> Brayan: ok
-@enduml
