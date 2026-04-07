@@ -30,7 +30,7 @@ A continuación se muestra un ejemplo de diagrama de clases:
 
 ![Diagrama de clases](//www.plantuml.com/plantuml/png/PP11JiGm34NtEKNKrG3g2BPTe97W1i01F8afbXAxSfmLukuab9PAh69__xplv58Cr6fEpeK4fVYtKa59_AVpVgGuUMBh9Kk-Aax-nPHuxWfce7GGxfBCnAURtrAgjVfhupvLP8CLopMZof5L8CKcHAdNX1qGSP521dhAmhQFVk2AHlf_iaUzAd2144XupNl7y06JVmR3tcxtzh159M01NVVTVc1u6FmuFhRpVBuTjWTClYs6wDRsptJVJSVevfoHKS6v2tAiENq3)
 
-> ⚠️ Reemplazar `URL_AQUI` por la URL generada con PlantUML.
+
 
 ---
 
