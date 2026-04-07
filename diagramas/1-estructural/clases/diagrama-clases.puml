@@ -1,0 +1,27 @@
+@startuml
+
+class Usuario {
+  -id: int
+  -nombre: String
+  -email: String
+  +login()
+  +logout()
+}
+
+class Cuenta {
+  -numero: String
+  -saldo: double
+  +depositar(monto: double)
+  +retirar(monto: double)
+}
+
+class Transaccion {
+  -fecha: Date
+  -monto: double
+  +procesar()
+}
+
+Usuario "1" --> "1..*" Cuenta : posee
+Cuenta "1" --> "0..*" Transaccion : genera
+
+@enduml
