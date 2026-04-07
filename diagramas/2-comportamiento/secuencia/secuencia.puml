@@ -6,10 +6,10 @@ skinparam NoteBackgroundColor #FEFECE
 Ruben -> "Brayan Ronaldinho": ¡Hola, hijo! ¿Cómo va todo?
 "Brayan Ronaldinho" --> Ruben: ¡Hola, papá! Todo bien.
 Ruben -> "Brayan Ronaldinho": ¿Qué tal estuvo tu día en el jardín?
-"Brayan Ronaldinho" -> Ruben: ¡Muy divertido! Hoy pintamos con muchos colores.
+"Brayan Ronaldinho" --> Ruben: ¡Muy divertido! Hoy pintamos con muchos colores.
 Ruben -> "Brayan Ronaldinho": ¡Qué genial! Ya casi termino de trabajar para ir por ti.
-"Brayan Ronaldinho" -> Ruben: ¡Siii! ¿Me traes una fruta para el camino?
+"Brayan Ronaldinho" --> Ruben: ¡Siii! ¿Me traes una fruta para el camino?
 Ruben -> "Brayan Ronaldinho": ¡Claro que sí, campeón! Te veo en un ratito.
-"Brayan Ronaldinho" -> Ruben: ¡Te espero, papá! ¡Te quiero mucho!
+"Brayan Ronaldinho" --> Ruben: ¡Te espero, papá! ¡Te quiero mucho!
 Ruben -> "Brayan Ronaldinho": Y yo a ti. ¡Ya voy en camino!
 @enduml
